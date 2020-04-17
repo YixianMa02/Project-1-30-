@@ -20,7 +20,36 @@
                 font-family: monospace; 
                 font-size: 20px; 
             }
-        
+    #frame{position:absolute;width:600px;height:600px;overflow:hidden;border-radius:0px}
+    #dis{position:absolute;left:-500px;top:-100px;opacity:.5}
+    #dis li{display:inline-block;width:600px;height:20px;margin:0 50px;float:left;text-align:center;color:#fff;border-radius:10px;background:#000}
+    #photos-z img{float:inherit;width:600px;height:600px}
+    #photos-z {  position: absolute;z-index:9;  width: calc(600px * 7);  }
+    .play{ animation: ma 7s ease-out infinite alternate;}
+    @keyframes ma {
+        0%,11% {        margin-left: 0px;       }
+        16%,27% {       margin-left: -600px;    }
+        32%,43% {       margin-left: -1200px;    }
+        47%,58% {       margin-left: -1800px;    }
+        63%,75% {       margin-left: -2400px;    }
+        80%,100% {      margin-left: -3000px;    }
+    }
+   
+            #frame{position:absolute;width:600px;height:4000px;overflow:hidden;border-radius:0px}
+    #dis{position:absolute;left:-500px;top:-1800px;opacity:.5}
+    #dis li{display:inline-block;width:600px;height:1200px;margin:0 50px;float:left;text-align:center;color:#fff;border-radius:10px;background:#000}
+    #photos-v img{float:inherit;width:600px;height:600px}
+    #photos-v {  position: absolute;z-index:9;  width: calc(600px * 7);  }
+    .play{ animation: ma 7s ease-out infinite alternate;}
+    @keyframes ma {
+        0%,11% {        margin-left: 0px;       }
+        16%,27% {       margin-left: -600px;    }
+        32%,43% {       margin-left: -1200px;    }
+        47%,58% {       margin-left: -1800px;    }
+        63%,75% {       margin-left: -2400px;    }
+        80%,100% {      margin-left: -3000px;    }
+    }
+   
         </style>     
         
     </head>
@@ -59,42 +88,45 @@
                 </div>
             </nav>
         </div>
+        <div>
+        <p>HG (High Grade) is the basic series in the Gundam model. Translated to mean high grade. The series is basically 1/144 scale in this village. After the commercialization of MS with a full height of 18m, it is about 12cm high. The proportion of the model that is held in hand. Because of its low price and huge transformation potential, it has become a favorite model series for both novice model and veteran painter.</p>
+        <p class="ztext-empty-paragraph">
+            <br>
+        </p>    
+        <h2>
+            <b> MS-06S Zaku II (Red Comet Ver)   </b>
+        </h2> 
+            
+        <div id="frame" >
+          <div id="photos-z" class="play">
+            <img src="HG_pic/hg_origin_char_zaku_II_00.png" >
+            <img src="HG_pic/hg_origin_char_zaku_II_06.png">
+            <img src="HG_pic/hg_origin_char_zaku_II_01.png" >
+            <img src="HG_pic/hg_origin_char_zaku_II_02.png" >
+            <img src="HG_pic/hg_origin_char_zaku_II_03.png" >
+            <img src="HG_pic/hg_origin_char_zaku_II_04.png" >
+          </div>
+        </div>
+            
+            <p class="ztext-empty-paragraph">
+            <br>
+        </p>    
+        <h2>
+            <b> HG Varguil [P-Bandai]   </b>
+        </h2> 
+            
+        <div id="frame" >
+          <div id="photos-v" class="play">
+            <img src="HG_pic/hg_varguil_01.jpg" >
+            <img src="HG_pic/hg_varguil_02.jpg">
+            <img src="HG_pic/hg_varguil_03.jpg" >
+            <img src="HG_pic/hg_varguil_04.jpg" >
+            <img src="HG_pic/hg_varguil_05.jpg" >
+            <img src="HG_pic/hg_varguil_06.jpg" >
+          </div>
+        </div>
+        </div>
     </body>
     
-    <script>
-        $("#homepage").click(function(event) {
-            setTimeout(function() {
-            window.location.href = "Project30_Part01.html";
-          }, 500)});
-        
-        $("#HG").click(function(event) {
-            setTimeout(function() {
-            window.location.href = "HG.html";
-          }, 500)});
-        
-        $("#RG").click(function(event) {
-            setTimeout(function() {
-            window.location.href = "RG.html";
-          }, 500)});
-        
-        $("#MG").click(function(event) {
-            setTimeout(function() {
-            window.location.href = "MG.html";
-          }, 500)});
-        
-        $("#PG").click(function(event) {
-            setTimeout(function() {
-            window.location.href = "PG.html";
-          }, 500)});
-        
-        $("#MB").click(function(event) {
-            setTimeout(function() {
-            window.location.href = "MB.html";
-          }, 500)});
-        
-        $("#MRS").click(function(event) {
-            setTimeout(function() {
-            window.location.href = "MRS.html";
-          }, 500)});
-    </script>
+    
 </html>
