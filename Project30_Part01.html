@@ -20,8 +20,11 @@
                 font-family: monospace; 
                 font-size: 20px; 
             }
-            .img {
-                width: 100%;
+            .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+            }
+            .carousel-inner>.carousel-item>img {
+                margin: auto;
                 height: auto;
             }
         
@@ -30,12 +33,12 @@
     
     <body>
         <div>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-between">
-                <a class="navbar-brand" href="#" style="color: black;font-size: 32px;font-family: monospace">Gundam FM</a>
+            <nav class="navbar navbar-expand-lg justify-content-between" style="background-color: deepskyblue">
+                <a class="navbar-brand" href="#" style="color: white;font-size: 32px;font-family: monospace">Gundam FM</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="collapse navbar-collapse" id="navbarNav" style="color: black">
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link" id="homepage">Home</a>
@@ -69,34 +72,50 @@
                 </li>
                 <li data-target="#carouselGundam" data-slide-to="1"></li>
                 <li data-target="#carouselGundam" data-slide-to="2"></li>
-                <li data-target="#carouselGundam" data-slide-to="3"></li>    
+                <li data-target="#carouselGundam" data-slide-to="3"></li>
+                <li data-target="#carouselGundam" data-slide-to="4"></li>
+                <li data-target="#carouselGundam" data-slide-to="5"></li>
             </ol>
             
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="d-block w-50" src="HG01.jpg" alt="First slide">
+                    <img class="d-block w-75" src="HG01.jpg" alt="First slide">
                     <div style="background-color: rgba(0, 0, 0, 0.5)" class="carousel-caption d-none d-md-block">
                         <h4>HG Barbatos Long Range Transport Booster Kutan Type 3</h4>
                         <p>Iron-Blooded-Orphans</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-50" src="RG01.jpg" alt="Second slide">
+                    <img class="d-block w-75" src="RG01.jpg" alt="Second slide">
                     <div style="background-color: rgba(0, 0, 0, 0.5)" class="carousel-caption d-none d-md-block">
                         <h4>RG Wing Gundam EW</h4>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-50" src="HG03.jpg" alt="Third slide">
+                    <img class="d-block w-75" src="PG01.jpg" alt="Third slide">
                     <div style="background-color: rgba(0, 0, 0, 0.5)" class="carousel-caption d-none d-md-block">
-                        <h4>HG Unicorn Gundam</h4>
+                        <h4>PG Unicorn Phenix Gundam</h4>
                         <p>Destroy Mode</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-50" src="HG04.jpg" alt="Fourth slide">
+                    <img class="d-block w-75" src="RG02.jpg" alt="Fourth slide">
                     <div style="background-color: rgba(0, 0, 0, 0.5)" class="carousel-caption d-none d-md-block">
-                        <h4>HG Gundam</h4>
+                        <h4>RG Freedom Gundam</h4>
+                        <p>Final Shoot</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-75" src="PG02.jpg" alt="Five slide">
+                    <div style="background-color: rgba(0, 0, 0, 0.5)" class="carousel-caption d-none d-md-block">
+                        <h4>PG Unicorn Phenix Gundam</h4>
+                        <p>Destroy Mode</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-75" src="RG03.jpg" alt="Six slide">
+                    <div style="background-color: rgba(0, 0, 0, 0.5)" class="carousel-caption d-none d-md-block">
+                        <h4>RG Wing Gundam</h4>
                     </div>
                 </div>
             </div>
