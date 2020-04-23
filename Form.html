@@ -1,0 +1,192 @@
+<!DOCTYPE HTML>
+
+<html>
+    <head lang="en">
+        <title>Gundam FanMade Website</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width-device-width, intial-scale-1"> 
+
+        <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <script
+        src="https://code.jquery.com/jquery-3.4.1.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>  
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        
+        <style>
+            .nav-link {
+                font-family: monospace; 
+                font-size: 20px; 
+            }
+            .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+            }
+            .carousel-inner>.carousel-item>img {
+                margin: auto;
+                height: auto;
+            }
+            .jumbotron {
+                background-color: royalblue;
+                color: white;
+            }
+        </style>
+        
+        <script>
+			function placeOrder() 
+            {            
+                var Name = document.getElementById("Name").value;
+                var email = document.getElementById("email").value;
+                
+                let table = document.getElementById("orders");
+                let newRow = table.insertRow();    
+                
+                let orderNumberCell = newRow.insertCell(0); 
+                let cell = newRow.insertCell(1);
+                
+                orderNumberCell.innerHTML = Name;
+                cell.innerHTML = email;
+
+				var createOrderForm = document.getElementById("createOrderForm");
+				createOrderForm.reset();
+			}
+		</script>
+    </head>
+    
+    <body>
+        <div>
+            <nav class="navbar navbar-expand-lg justify-content-between" style="background-color: deepskyblue">
+                <a class="navbar-brand" href="#" style="color: white;font-size: 32px;font-family: monospace">Gundam FM</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav" style="color: black">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" id="homepage">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="HG">High Grade</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="RG">Real Grade</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="MG">Master Grade</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="PG">Perfect Grade</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="MB">Metal Build</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="MRS">Metal Robot Spirits</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <br>
+        <div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="jumbotron jumbotron-fluid text-center">
+						<h2>Become a Member of Our Community !</h2>
+					</div>
+					<form id="createOrderForm">
+						<div class="form-group">
+							<label for="Name">Your Name as a Sunscirber</label>
+							<input class="form-control" type="text" id="Name">
+						</div>
+						<div class="form-group">
+							<label for="email">Your Email</label>
+							<input class="form-control" type="email" id="email">
+						</div>
+					</form>
+                    <div class="form-group">
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="AgreeCheck" placeholder="Login">
+                            <label class="form-check-label" for="AgreeCheck">Receive Information By Email</label>
+                        </div>
+                    </div>
+					<div class="form-group">
+						<button class="btn btn-primary" onclick="placeOrder()" id="register">Join Now</button>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="jumbotron jumbotron-fluid text-center">
+						<h2>Our Subscribers</h2>
+					</div>
+					<table id='orders' class="table">
+						<thead>
+							<tr>
+								<th scope="col">Name</th>
+								<th scope="col">Email</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>SK.Shadow</td>
+								<td>2345gfw@gmail.com</td>
+							</tr>
+                            <tr>
+								<td>SKr</td>
+								<td>1wqefvcs@gmail.com</td>
+							</tr>
+                            <tr>
+								<td>XXXX</td>
+								<td>ascdvacwe2@gmail.com</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+    </body>
+    
+    <script>
+        $("#homepage").click(function(event) {
+            setTimeout(function() {
+            window.location.href = "Project30_Part01.html";
+          }, 500)});
+        
+        $("#HG").click(function(event) {
+            setTimeout(function() {
+            window.location.href = "HG.html";
+          }, 500)});
+        
+        $("#RG").click(function(event) {
+            setTimeout(function() {
+            window.location.href = "RG.html";
+          }, 500)});
+        
+        $("#MG").click(function(event) {
+            setTimeout(function() {
+            window.location.href = "MG.html";
+          }, 500)});
+        
+        $("#PG").click(function(event) {
+            setTimeout(function() {
+            window.location.href = "PG.html";
+          }, 500)});
+        
+        $("#MB").click(function(event) {
+            setTimeout(function() {
+            window.location.href = "MB.html";
+          }, 500)});
+        
+        $("#MRS").click(function(event) {
+            setTimeout(function() {
+            window.location.href = "MRS.html";
+          }, 500)});
+        $("#Game1").click(function(event) {
+            setTimeout(function() {
+            window.location.href = "Game.html";
+          }, 500)});
+        $("#Form").click(function(event) {
+            setTimeout(function() {
+            window.location.href = "Form.html";
+          }, 500)});
+        
+    </script>
+</html>
