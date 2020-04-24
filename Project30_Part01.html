@@ -65,7 +65,7 @@
     <body>
         <div>
             <nav class="navbar navbar-expand-lg justify-content-between" style="background-color: deepskyblue">
-                <a class="navbar-brand" href="#" style="color: white;font-size: 32px;font-family: monospace">Gundam FM</a>
+                <a class="navbar-brand" href="#" id="homePage" style="color: white;font-size: 32px;font-family: monospace">Gundam FM</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -329,6 +329,10 @@
             window.location.href = "Form.html";
           }, 500)});
         
+        $("#homePage").click(function(event) {
+            setTimeout(function() {
+            window.location.href = "Project30_Part01.html";
+          }, 500)});
     </script>
     
 </html>
