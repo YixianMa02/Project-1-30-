@@ -247,7 +247,7 @@
         
         <div class="container-fluid text-center service-padding bg-light">
             <h4>GAME</h4>
-            <h6>Here is a little PingPong Game. Give a try and give us some feed back !</h6>
+            <h6>Here are some little Games. Give a try and give us some feed back !</h6>
             <br>
             <br>
             <div class="row pb-5">
@@ -258,6 +258,17 @@
                 <div class="col-sm-3">
                     <br>
                     <button type="button" class="btn btn-outline-info" style="font-family: monospace; font-size: 20px" id="Game1">Check Here!</button>
+                </div>
+                <div class="col-sm-3"></div>
+            </div>
+            <div class="row pb-5">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-3">
+                    <span class="fa fa-search logo-lg"></span>
+                </div>
+                <div class="col-sm-3">
+                    <br>
+                    <button type="button" class="btn btn-outline-info" style="font-family: monospace; font-size: 20px" id="Game2">Check Here!</button>
                 </div>
                 <div class="col-sm-3"></div>
             </div>
@@ -302,10 +313,17 @@
             setTimeout(function() {
             window.location.href = "MRS.html";
           }, 500)});
+        
         $("#Game1").click(function(event) {
             setTimeout(function() {
             window.location.href = "Game.html";
           }, 500)});
+        
+        $("#Game2").click(function(event) {
+            setTimeout(function() {
+            window.location.href = "index.html";
+          }, 500)});
+        
         $("#Form").click(function(event) {
             setTimeout(function() {
             window.location.href = "Form.html";
