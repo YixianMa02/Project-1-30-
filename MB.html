@@ -16,10 +16,58 @@
         src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>  
         
         <style>
+            p {
+                font-family: monospace;
+                font-size: 16.5px;
+            }
             .nav-link {
                 font-family: monospace; 
                 font-size: 20px; 
             }
+            .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+            }
+            .padding {
+                padding: 40px 40px;
+            }
+             #frame01{width:600px;height:600px;overflow:hidden;border-radius:10px;left:20px;top:15px} <!-- 图片1的位置 flame01 对应的是 flame01  的格子 -->
+    #dis li{display:block;width:600px;height:600px;margin:10px;float:left;text-align:center;color:#cacaca;border-radius:10px;background:#000}
+    #photos-z img{float:inherit;width:600px;height:600px}
+    #photos-z {position: absolute; width: calc(610px * 7); }
+    .play{ animation: make 15s infinite alternate;}
+    
+    #frame02{width:600px;height:600px;overflow:hidden;border-radius:10px;right:20px;top:15px}  <!-- 图片2的位置 flame02 对应的是 flame02  的格子 -->
+    #dis li{display:block;width:600px;height:600px;margin:10px;float:right;text-align:center;color:#cacaca;border-radius:10px;background:#000}
+    #photos-v img{float:inherit;width:600px;height:600px}
+    #photos-v {position: absolute; width: calc(610px * 7); }
+    .play{ animation: make 15s infinite alternate;}
+   
+    #frame03{width:600px;height:600px;overflow:hidden;border-radius:10px;left:20px;top:15px}  <!-- 图片3的位置 flame03 对应的是 flame03  的格子 -->
+    #dis li{display:block;width:600px;height:600px;margin:10px;float:left;text-align:center;color:#cacaca;border-radius:10px;background:#000}
+    #photos-k img{float:inherit;width:600px;height:600px}
+    #photos-k {position: absolute; width: calc(610px * 7); }
+    .play{ animation: make 15s infinite alternate;}
+            
+    #frame04{width:600px;height:600px;overflow:hidden;border-radius:10px;right:20px;top:15px}  <!-- 图片4的位置 flame04 对应的是 flame04  的格子 -->
+    #dis li{display:block;width:600px;height:600px;margin:10px;float:right;text-align:center;color:#cacaca;border-radius:10px;background:#000}
+    #photos-p img{float:inherit;width:600px;height:600px}
+    #photos-p {position: absolute; width: calc(610px * 7); }
+    .play{ animation: make 15s infinite alternate;}
+            
+    #frame05{width:600px;height:600px;overflow:hidden;border-radius:10px;left:20px;top:15px} <!-- 图片5的位置 flame05 对应的是 flame05  的格子 -->
+    #dis li{display:block;width:600px;height:600px;margin:10px;float:left;text-align:center;color:#cacaca;border-radius:10px;background:#000}
+    #photos-r img{float:inherit;width:600px;height:600px}
+    #photos-r {position: absolute; width: calc(610px * 7); }
+    .play{ animation: make 15s infinite alternate;}       
+    
+    @keyframes make {     <!-- 这是个 funtion 放在最后就行 -->
+        0%,15% {        margin-left: 0px;       }
+        15%,30% {       margin-left: -620px;    }
+        30%,45% {       margin-left: -1240px;    }
+        45%,60% {       margin-left: -1850px;    }
+        60%,75% {       margin-left: -2480px;    }
+        75%,100% {      margin-left: -3050px;    }
+    }
         
         </style>     
         
@@ -59,6 +107,152 @@
                 </div>
             </nav>
         </div>
+        
+         <div class="jumbotron jumbotron-fluid text-center bg-info">   <!-- 浅灰色的格子   12    -->
+            <div class="col-md-12 py-4" style="top: 10px">    <!-- 文字的格式    12    -->
+                <p style="font-family: monospace;font-size: 24px; color: white">Metal Build is a line of real robot action figures by Bandai. The line consists of mecha figures with extreme detail and articulation plus diecast metal parts. While the line is non-scale, the Gundams are within the same height as their 1/100 scale Gunpla counterparts. Metal Build is predominantly Gundam-oriented, with the ARX-8 Laevatein and ARX-7 Arbalest from Full Metal Panic!, Mazinger Z and Great Mazinger from Mazinger Z: Infinity, and the EVA-01 Test Type and EVA-02 Production Type from Neon Genesis Evangelion being the only non-Gundam releases.
+
+This article covers only the Gundam releases.</p >  
+            </div>
+        </div>
+        <div class="container-fluid"> <!-- 第一个图片加文字 -->
+            <div class="row">    
+                <div class="col-md-5 py-4" id="frame01">  <!-- 第一个图片的格式   6   -->
+                    <h2 style="text-align: center">
+                        <b>Metal Build Gundam Astray Red Frame Kai (Alternative Strike Ver.)</b>
+                    </h2> 
+                  <div id="photos-z" class="play">   <!-- 第二个图片 -->
+                    <img src="MB_pic/mb_astrayRed_01.jpg">
+                    <img src="MB_pic/mb_astrayRed_02.jpg">
+                    <img src="MB_pic/mb_astrayRed_03.jpg">
+                    <img src="MB_pic/mb_astrayRed_04.jpg">
+                    <img src="MB_pic/mb_astrayRed_05.jpg">
+                    <img src="MB_pic/mb_astrayRed_06.jpg">
+                  </div>  
+                </div>
+                <div class="col-md-2 py-4"></div>     <!-- 第一个图片的格式   1   -->
+                <div class="col-md-5 py-4" style="top: 100px">    <!-- 第一个图片的格式    5    -->
+                    <div class="jumbotron jumbotron-fluid text-center bg-danger" style="color: white">
+                        <p>The Astray Red Frame Kai is the upgraded version of the MBF-P02 Gundam Astray Red Frame developed and piloted by Lowe Guele. It first appeared in the photo series Mobile Suit Gundam SEED VS Astray.
+                            <br>From the Alternative Strike MSV series comes this repainted Astray! The body scheme has been totally re-envisioned for a dramatic new look. New parts include a backpack that can be mounted on either Strike or Astray, for enhanced play value and display.An upgraded form of MBF-P02 Astray Red Frame developed by Lowe after his first encounter with LN-GAT-X207 Nebula Blitzs, the major change to the suit is the replacement of the Red Frame's backpack with Tactical Arms IIL and its mount. Besides the two head-mounted "Igelstellung" 75mm multi-barrel CIWS, Tactical Arms IIL and "Gerbera Straight" katana, Red Frame Kai is also equipped with "Tiger Pierce" Katana. It no longer uses the physical shield and the beam torch component of Tactical Arms IIL replaces the Type 71 beam rifle.
+                        </p >  
+                    </div>
+                </div>
+            </div>
+        </div>
+                            
+        <br>
+        <br>
+        
+            <div class="container-fluid">  <!-- 第二个图片加文字 -->
+            <div class="row">   
+                <div class="col-md-5 py-4" style="top: 50px">     <!-- 第二个图片的格式    5    -->
+                    <div class="jumbotron jumbotron-fluid text-center bg-primary" style="color: white">
+                        <p>The GAT-X105 Strike Gundam is a prototype multi-mode mobile suit featured in the anime Mobile Suit Gundam SEED. Its primary pilot was Kira Yamato before it was passed down to former mobile armor ace pilot, Mu La Flaga.<br>Based on Strike Gundam's appearance in Mobile Suit Gundam SEED, this exclusive Metal Build figure comes with its weapons, shield, and a dedicated base with a support. Standing at 7 inches tall, Strike Gundam can be combined with the separately-sold Flight Unit to recreate the Alternative Strike version.The Strike Gundam is the most versatile of the five Gundams in the Earth Alliance's G Project and can be easily configured for various types of combat. Using its Striker Packs, it can be outfitted for high mobility combat (Aile Strike), long range assault (Launcher Strike) or melee combat (Sword Strike). In addition, the Striker packs are also equipped with backup batteries that can extend the Strike's operation time. Built on the X100 series frame first adopted by the GAT-X102 Duel Gundam, the Strike also has the Phase Shift armor system. In terms of armament, the Strike itself is equipped only with two head-mounted CIWS and a pair of combat knives stored in the side skirt armor, but it can also be armed with a bazooka, a shield and a beam rifle. Later on, the Strike Gundam was equipped with a Natural-use OS to allow its new pilot, Mu La Flaga, to control the suit effectively.
+
+Armaments</p >  
+                    </div>
+                </div>
+                <div class="col-md-2 py-4"></div>      <!-- 第二个图片的格式    1    -->
+                <div class="col-md-5 py-4" id="frame02">  <!-- 第二个图片的格式    6    -->
+                    <h2 style="text-align: center">
+                        <b> Metal Build Strike Gundam Exclusive</b>
+                    </h2> 
+                  <div id="photos-v" class="play">     <!-- 第二个图片 -->
+                    <img src="MB_pic/mb_strike_01.jpg">
+                    <img src="MB_pic/mb_strike_02.jpg">
+                    <img src="MB_pic/mb_strike_03.jpg">
+                    <img src="MB_pic/mb_strike_04.jpg">
+                    <img src="MB_pic/mb_strike_05.jpg">
+                    <img src="MB_pic/mb_strike_06.jpg">
+                  </div>
+                </div>
+            </div>
+        </div>
+     
+        <br>
+        <br>
+        
+        <div class="container-fluid"> <!-- 第三个图片加文字 -->
+            <div class="row">    
+                <div class="col-md-5 py-4" id="frame03" style="border: 10px" >  <!-- 第三个图片的格式   6   -->
+                    <h2 style="text-align: center">
+                        <b>Metal Build Freedom Gundam (Concept 2)</b>
+                    </h2> 
+                  <div id="photos-k" class="play">   <!-- 第三个图片 -->
+                    <img src="MB_pic/mb_freedom_01.jpg">
+                    <img src="MB_pic/mb_freedom_02.jpg">
+                    <img src="MB_pic/mb_freedom_03.jpg">
+                    <img src="MB_pic/mb_freedom_04.jpg">
+                    <img src="MB_pic/mb_freedom_05.jpg">
+                    <img src="MB_pic/mb_freedom_06.jpg">
+        
+                  </div>  
+                </div>
+                <div class="col-md-2 py-4"></div>     <!-- 第三个图片的格式   1   -->
+                <div class="col-md-5 py-4" style="top: 100px">    <!-- 第三个图片的格式    5    -->
+                    <div class="jumbotron jumbotron-fluid text-center bg-warning" style="color: black">
+                        <p>The ZGMF-X10A Freedom Gundam (aka Freedom, X10A) is a mobile suit that appears in the Mobile Suit Gundam SEED and Mobile Suit Gundam SEED Destiny anime. The unit is piloted by Kira Yamato.<br>Freedom Gundam is back in the Metal Build line once again with a second interpretation of this iconic Gundam. Standing 7 inches tall, Freedom Gundam is able to perform a wide range of powerful poses and features fully poseable wing parts.One of ZAFT's ZGMF-X series of Gundam units build in CE 71 using technology derived from the four captured Alliance's Gundam, the Freedom Gundam has Phase Shift Armor and its armaments include CIWS guns, beam sabers, shield, plasma beam cannons, railguns, and a beam rifle. When the latter three weapons are used simultaneously, the Freedom is said to be in 'Full Burst Mode'. The suit has full flight capabilities in the atmosphere and the back-mounted wings can be deployed in "High Mobility Aerial Tactics (HiMAT) Mode" to enhance its mobility in the atmosphere or in space. It also has an advanced targeting system, the Multi Lock-On System, that allows it to target and fire at multiple enemy units simultaneously. </p > 
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <br>
+        <br>
+        
+        <div class="container-fluid">  <!-- 第四个图片加文字 -->
+            <div class="row">   
+                <div class="col-md-5 py-4">     <!-- 第四个图片的格式    5    -->
+                    <div class="jumbotron jumbotron-fluid text-center bg-secondary" style="color: white">
+                        <p>From the Mobile Suit Gundam 00 Festival 10 "Re:vision" live drama performance comes an exclusive Metal Build figure of the gorgeous Mobile Suit, GN-001REIV Gundam Exia Repair IV! This articulated figure is made of plastic and die-cast metal, and comes with all of its GN weaponry.<br>In terms of armaments, the Penelope is armed with a beam rifle, vulcan guns, beam sabers, small mega particle cannons and funnel missiles, an extremely accurate Psycommu-guided micro missile. The Penelope is a unit that greatly excels in aerial combat.</p> 
+                    </div>
+                </div>
+                <div class="col-md-2 py-4"></div>      <!-- 第四个图片的格式    1    -->
+                <div class="col-md-5 py-4" id="frame04" style="border: 10px" >  <!-- 第四个图片的格式    6    -->
+                    <h2 style="text-align: center">
+                        <b>Metal Build GN-001REIV Gundam Exia Repair IV Exclusive</b>
+                    </h2> 
+                  <div id="photos-p" class="play">   <!-- 第四个图片 -->
+                    <img src="MB_pic/mb_GN-001REIV_01.jpg" >
+                    <img src="MB_pic/mb_GN-001REIV_02.jpg">
+                    <img src="MB_pic/mb_GN-001REIV_03.jpg" >
+                    <img src="MB_pic/mb_GN-001REIV_04.jpg" >
+                    <img src="MB_pic/mb_GN-001REIV_05.jpg" >
+                    <img src="MB_pic/mb_GN-001REIV_06.jpg" >
+                  </div>  
+                </div>
+            </div>
+        </div>
+        
+        <br>
+        <br>
+        
+        <div class="container-fluid"> <!-- 第五个图片加文字 -->
+            <div class="row">    
+                <div class="col-md-5 py-4" id="frame05" style="border: 10px" >  <!-- 第五个图片的格式   6   -->
+                    <h2 style="text-align: center">
+                        <b>Metal Build Gundam Astraea + Proto GN High Mega Launcher Exclusive Set</b>
+                    </h2> 
+                  <div id="photos-r" class="play">   <!-- 第五个图片 -->
+                    <img src="MB_pic/mb_Proto_01.jpg">
+                    <img src="MB_pic/mb_Proto_02.jpg">
+                    <img src="MB_pic/mb_Proto_03.jpg">
+                    <img src="MB_pic/mb_Proto_04.jpg">
+                    <img src="MB_pic/mb_Proto_05.jpg">
+                    <img src="MB_pic/mb_Proto_06.jpg">
+        
+                  </div>  
+                </div>
+                <div class="col-md-2 py-4"></div>     <!-- 第五个图片的格式   1   -->
+                <div class="col-md-5 py-4" style="top: 100px">    <!-- 第五个图片的格式    5    -->
+                    <div class="jumbotron jumbotron-fluid text-center bg-info" style="color: white">
+                        <p>The GNY-001 Gundam Astraea (aka Gundam Astraea, Astraea) is a 2nd generation Gundam that first appeared in the Mobile Suit Gundam 00P side story. Known pilots include Ruido Resonance and Chall Acustica.<br>Using the GN-000 0 Gundam as a base, the Celestial Being’s Krung Thep engineering team developed four 2nd generation Gundams in 2292 AD to test armaments, equipments, as well as custom machines for live combat.These Gundams also participated in preliminary tests for armed intervention, and later served as the base units for the 3rd generation Gundams. Gundam Astraea is the first of the second generation Gundams to be completed, it is named after the Goddess of Justice depicted on the 'Justice' tarot card, and this reflects the strong convictions about the organization’s ideology.All 2nd generation Gundams have tarot cards related names.</p >  
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid padding bg-info"></div>
     </body>
     
     <script>
@@ -96,5 +290,11 @@
             setTimeout(function() {
             window.location.href = "MRS.html";
           }, 500)});
+        
+        $("#homePage").click(function(event) {
+            setTimeout(function() {
+            window.location.href = "Project30_Part01.html";
+          }, 500)});
     </script>
 </html>
+
