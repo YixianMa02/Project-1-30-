@@ -27,6 +27,9 @@
             .navbar-toggler-icon {
             background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
             }
+            .padding {
+                padding: 40px 40px;
+            }
             
     #frame01{width:600px;height:600px;overflow:hidden;border-radius:10px;left:20px;top:15px} <!-- 图片1的位置 flame01 对应的是 flame01  的格子 -->
     #dis li{display:block;width:600px;height:600px;margin:10px;float:left;text-align:center;color:#cacaca;border-radius:10px;background:#000}
@@ -73,7 +76,7 @@
     <body>
         <div>
             <nav class="navbar navbar-expand-lg justify-content-between" style="background-color: deepskyblue">
-                <a class="navbar-brand" href="#" style="color: white;font-size: 32px;font-family: monospace">Gundam FM</a>
+                <a class="navbar-brand" href="#" id="homePage" style="color: white;font-size: 32px;font-family: monospace">Gundam FM</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -246,7 +249,9 @@
                 </div>
             </div>
         </div>
-        
+        <br>
+        <br>
+        <div class="container-fluid padding bg-info"></div>
     </body>
     
     <script>
@@ -283,6 +288,11 @@
         $("#MRS").click(function(event) {
             setTimeout(function() {
             window.location.href = "MRS.html";
+          }, 500)});
+        
+        $("#homePage").click(function(event) {
+            setTimeout(function() {
+            window.location.href = "Project30_Part01.html";
           }, 500)});
     </script>
     
