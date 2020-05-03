@@ -16,10 +16,59 @@
         src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>  
         
         <style>
+            p {
+                font-family: monospace;
+                font-size: 16.5px;
+            }
             .nav-link {
                 font-family: monospace; 
                 font-size: 20px; 
             }
+            .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+            }
+            .padding {
+                padding: 40px 40px;
+            }
+            
+    #frame01{width:600px;height:650px;overflow:hidden;border-radius:10px;left:20px;top:15px} <!-- 图片1的位置 flame01 对应的是 flame01  的格子 -->
+    #dis li{display:block;width:600px;height:650px;margin:10px;float:left;text-align:center;color:#cacaca;border-radius:10px;background:#000}
+    #photos-z img{float:inherit;width:600px;height:600px}
+    #photos-z {position: absolute; width: calc(610px * 7); }
+    .play{ animation: make 15s infinite alternate;}
+    
+    #frame02{width:600px;height:600px;overflow:hidden;border-radius:10px;right:20px;top:15px}  <!-- 图片2的位置 flame02 对应的是 flame02  的格子 -->
+    #dis li{display:block;width:600px;height:600px;margin:10px;float:right;text-align:center;color:#cacaca;border-radius:10px;background:#000}
+    #photos-v img{float:inherit;width:600px;height:600px}
+    #photos-v {position: absolute; width: calc(610px * 7); }
+    .play{ animation: make 15s infinite alternate;}
+   
+    #frame03{width:600px;height:650px;overflow:hidden;border-radius:10px;left:20px;top:15px}  <!-- 图片3的位置 flame03 对应的是 flame03  的格子 -->
+    #dis li{display:block;width:600px;height:650px;margin:10px;float:left;text-align:center;color:#cacaca;border-radius:10px;background:#000}
+    #photos-k img{float:inherit;width:600px;height:600px}
+    #photos-k {position: absolute; width: calc(610px * 7); }
+    .play{ animation: make 15s infinite alternate;}
+            
+    #frame04{width:600px;height:650px;overflow:hidden;border-radius:10px;right:20px;top:15px}  <!-- 图片4的位置 flame04 对应的是 flame04  的格子 -->
+    #dis li{display:block;width:600px;height:650px;margin:10px;float:right;text-align:center;color:#cacaca;border-radius:10px;background:#000}
+    #photos-p img{float:inherit;width:600px;height:600px}
+    #photos-p {position: absolute; width: calc(610px * 7); }
+    .play{ animation: make 15s infinite alternate;}
+            
+    #frame05{width:600px;height:600px;overflow:hidden;border-radius:10px;left:20px;top:15px} <!-- 图片5的位置 flame05 对应的是 flame05  的格子 -->
+    #dis li{display:block;width:600px;height:600px;margin:10px;float:left;text-align:center;color:#cacaca;border-radius:10px;background:#000}
+    #photos-r img{float:inherit;width:600px;height:600px}
+    #photos-r {position: absolute; width: calc(610px * 7); }
+    .play{ animation: make 15s infinite alternate;}       
+    
+    @keyframes make {     <!-- 这是个 funtion 放在最后就行 -->
+        0%,15% {        margin-left: 0px;       }
+        15%,30% {       margin-left: -620px;    }
+        30%,45% {       margin-left: -1230px;    }
+        45%,60% {       margin-left: -1850px;    }
+        60%,75% {       margin-left: -2480px;    }
+        75%,100% {      margin-left: -3050px;    }
+    }
         
         </style>     
         
@@ -27,12 +76,12 @@
     
     <body>
         <div>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-between">
-                <a class="navbar-brand" href="#" style="color: black;font-size: 32px;font-family: monospace">Gundam FM</a>
+            <nav class="navbar navbar-expand-lg justify-content-between" style="background-color: deepskyblue">
+                <a class="navbar-brand" href="#" id="homePage" style="color: white;font-size: 32px;font-family: monospace">Gundam FM</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="collapse navbar-collapse" id="navbarNav" style="color: black">
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link" id="homepage">Home</a>
@@ -59,6 +108,150 @@
                 </div>
             </nav>
         </div>
+        
+         <div class="jumbotron jumbotron-fluid text-center bg-info">   <!-- 浅灰色的格子   12    -->
+            <div class="col-md-12 py-4" style="top: 10px">    <!-- 文字的格式    12    -->
+                <p style="font-family: monospace;font-size: 24px; color: white">Master Grade (MG) (マスターグレード Masutā Gurēdo?) is a line of 1/100 scale Gunpla kits of the Mobile Suits in the Gundam meta series. The series was first produced in 1995 as part of the Gundam 15th Anniversary project.Master Grade kits differ from other 1/100 scale Gunpla, with their level of detail, articulation, and proportions being second only to the Perfect Grade line. A majority of MG kits feature a skeletal inner frame with working hydraulics, some also accommodate Gunpla LED Units for light-up gimmicks. To give viewers a perspective of the Mobile Suit's size, many MG kits come with 1/100 scale figurines of the pilots or key characters of their respective series. In addition, some kits include 1/20 scale character figures.</p>  
+            </div>
+        </div>
+        <div class="container-fluid"> <!-- 第一个图片加文字 -->
+            <div class="row">    
+                <div class="col-md-5 py-4" id="frame01">  <!-- 第一个图片的格式   6   -->
+                    <h2 style="text-align: center">
+                        <b>MG Gundam Astray Blue Frame D</b>
+                    </h2> 
+                  <div id="photos-z" class="play">   <!-- 第二个图片 -->
+                    <img src="MG_pic/mg_astray_blue_frame_d_01.jpg">
+                    <img src="MG_pic/mg_astray_blue_frame_d_02.jpg">
+                    <img src="MG_pic/mg_astray_blue_frame_d_03.jpg">
+                    <img src="MG_pic/mg_astray_blue_frame_d_04.jpg">
+                    <img src="MG_pic/mg_astray_blue_frame_d_05.jpg">
+                    <img src="MG_pic/mg_astray_blue_frame_d_06.jpg">
+                  </div>  
+                </div>
+                <div class="col-md-2 py-4"></div>     <!-- 第一个图片的格式   1   -->
+                <div class="col-md-5 py-4" style="top: 100px">    <!-- 第一个图片的格式    5    -->
+                    <div class="jumbotron jumbotron-fluid text-center bg-danger" style="color: white">
+                        <p>The MBF-P03 Gundam Astray Blue Frame is a Mobile Suit in the manga series Gundam SEED Astray and the photo-novel Mobile Suit Gundam SEED Astray B. It is piloted by Gai Murakumo.<br>The MBF-P03 Astray Blue Frame was one of five identical prototype combat mobile suits developed using stolen data from the Earth Alliance's G Project and was designated for testing optional equipment. Its computer contains data and blueprints for various optional equipment. Most of the technology from the G Project was successfully copied with the exception of Phase Shift armor. In its place the Astrays' designers made the machines out of a lighter foaming metal compound and were built with minimal armor over the frame. This made the Astray mobile suits lighter and faster than their G Project counterparts.</p >  
+                    </div>
+                </div>
+            </div>
+        </div>
+                            
+        <br>
+        <br>
+        
+            <div class="container-fluid">  <!-- 第二个图片加文字 -->
+            <div class="row">   
+                <div class="col-md-5 py-4" style="top: 50px">     <!-- 第二个图片的格式    5    -->
+                    <div class="jumbotron jumbotron-fluid text-center bg-primary" style="color: white">
+                        <p>The SSMS-010 ZZ Gundam is a variant of the MSZ-010 ΖΖ Gundam featured in Mobile Suit Gundam: The Revival of Zeon and Mobile Suit Gundam: Advanced Operation.<br>A heavyweight MS used in base capture operations, it can transform into the "G-Fortress" heavy bomber. It is provided with high offensive power; the High Mega Cannon on its head has immense destructive power comparable to the mega beam cannon of a battleship. However, its use is limited and can only be fired once. Due to its large size and complex transformation mechanisms, its legs can barely support its weight, resulting in poor ground coverage. In addition, the increasing complexity of its production process and the high costs associated with it meant only a small number could be produced.</p >  
+                    </div>
+                </div>
+                <div class="col-md-2 py-4"></div>      <!-- 第二个图片的格式    1    -->
+                <div class="col-md-5 py-4" id="frame02">  <!-- 第二个图片的格式    6    -->
+                    <h2 style="text-align: center">
+                        <b> MG ZZ Gundam Ver. Ka</b>
+                    </h2> 
+                  <div id="photos-v" class="play">     <!-- 第二个图片 -->
+                    <img src="MG_pic/mg_zz_gundam_ver_ka_1.jpg">
+                    <img src="MG_pic/mg_zz_gundam_ver_ka_2.jpg">
+                    <img src="MG_pic/mg_zz_gundam_ver_ka_3.jpg">
+                    <img src="MG_pic/mg_zz_gundam_ver_ka_4.jpg">
+                    <img src="MG_pic/mg_zz_gundam_ver_ka_1.jpg">
+                    <img src="MG_pic/mg_zz_gundam_ver_ka_2.jpg">
+                    
+                  </div>
+                </div>
+            </div>
+        </div>
+     
+        <br>
+        <br>
+        
+        <div class="container-fluid"> <!-- 第三个图片加文字 -->
+            <div class="row">    
+                <div class="col-md-5 py-4" id="frame03" style="border: 10px" >  <!-- 第三个图片的格式   6   -->
+                    <h2 style="text-align: center">
+                        <b>MG MS-06F Zaku II (Dozle Zabi Custom) [P-Bandai]</b>
+                    </h2> 
+                  <div id="photos-k" class="play">   <!-- 第三个图片 -->
+                    <img src="MG_pic/mg_dozle_zaku_01.jpg">
+                    <img src="MG_pic/mg_dozle_zaku_02.jpg">
+                    <img src="MG_pic/mg_dozle_zaku_03.jpg">
+                    <img src="MG_pic/mg_dozle_zaku_04.jpg">
+                    <img src="MG_pic/mg_dozle_zaku_05.jpg">
+                    <img src="MG_pic/mg_dozle_zaku_06.jpg">
+        
+                  </div>  
+                </div>
+                <div class="col-md-2 py-4"></div>     <!-- 第三个图片的格式   1   -->
+                <div class="col-md-5 py-4" style="top: 75px">    <!-- 第三个图片的格式    5    -->
+                    <div class="jumbotron jumbotron-fluid text-center bg-warning" style="color: black">
+                        <p>The Zaku II Dozle Zabi Custom is one of many variants of the standard MS-06 Zaku II created by the Principality of Zeon. It was personally piloted by Space Attack Force Commander Dozle Zabi.<br>This customized MS-06F was designed for Vice Admiral Dozle Zabi, the commander of the Zeon's Space Attack Force. During the One Year War, Dozle used this suit in his infamous frontline "inspections." It was modified from the standard MS-06F Zaku II with a spiked pauldron on both shoulders, ornate gold engravings and trim all over its frame, and a custom heat tomahawk melee weapon. Due to Dozle Zabi's physical size, he had to have the cockpit specially enlarged.</p > 
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <br>
+        <br>
+        
+        <div class="container-fluid">  <!-- 第四个图片加文字 -->
+            <div class="row">   
+                <div class="col-md-5 py-4" style="top: 100px">     <!-- 第四个图片的格式    5    -->
+                    <div class="jumbotron jumbotron-fluid text-center bg-secondary" style="color: white">
+                        <p>The MS-07B Gouf M'Quve Custom is a variant of the MS-07 Gouf featured in Mobile Suit Variations.<br>Shortly after its initial introduction, the MS-07A Gouf was replaced by the completed MS-07B Gouf model. The B-type Gouf easily outstripped the MS-06F Zaku II in terms of speed, power output, and melee combat ability. But the mobile suit's overall improvement was not great enough to be justified by its increased cost. The Gouf's production was cut short by the development of a more cost efficient unit, the more powerful and nimble MS-09B Dom. Despite its very short production run, it was still deployed across the world alongside Zakus and Doms. One customized unit was assigned to Colonel M'Quve, which was painted in a two-tone baby blue on royal blue color schemes with ornate gold engravings and trim all over its frame. The head of M'Quve's Gouf also features a custom spearhead-like commander antenna in place of the usual Zeon's arrow-style antenna.</p> 
+                    </div>
+                </div>
+                <div class="col-md-2 py-4"></div>      <!-- 第四个图片的格式    1    -->
+                <div class="col-md-5 py-4" id="frame04" style="border: 10px" >  <!-- 第四个图片的格式    6    -->
+                    <h2 style="text-align: center">
+                        <b>MG MS-07B Gouf (M Quve Custom)</b>
+                    </h2> 
+                  <div id="photos-p" class="play">   <!-- 第四个图片 -->
+                    <img src="MG_pic/mg_gouf_mquve_custom_01.jpg" >
+                    <img src="MG_pic/mg_gouf_mquve_custom_02.jpg">
+                    <img src="MG_pic/mg_gouf_mquve_custom_03.jpg" >
+                    <img src="MG_pic/mg_gouf_mquve_custom_04.jpg" >
+                    <img src="MG_pic/mg_gouf_mquve_custom_05.jpg" >
+                    <img src="MG_pic/mg_gouf_mquve_custom_01.jpg" >
+                  </div>  
+                </div>
+            </div>
+        </div>
+        
+        <br>
+        <br>
+        
+        <div class="container-fluid"> <!-- 第五个图片加文字 -->
+            <div class="row">    
+                <div class="col-md-5 py-4" id="frame05" style="border: 10px" >  <!-- 第五个图片的格式   6   -->
+                    <h2 style="text-align: center">
+                        <b>MG MS-09R Rick Dom (Dozle Zabi Custom) [P-Bandai]</b>
+                    </h2> 
+                  <div id="photos-r" class="play">   <!-- 第五个图片 -->
+                    <img src="MG_pic/mg_rick_dom_dozle_zabi_01.jpg">
+                    <img src="MG_pic/mg_rick_dom_dozle_zabi_02.jpg">
+                    <img src="MG_pic/mg_rick_dom_dozle_zabi_03.jpg">
+                    <img src="MG_pic/mg_rick_dom_dozle_zabi_04.jpg">
+                    <img src="MG_pic/mg_rick_dom_dozle_zabi_01.jpg">
+                    <img src="MG_pic/mg_rick_dom_dozle_zabi_02.jpg">
+        
+                  </div>  
+                </div>
+                <div class="col-md-2 py-4"></div>     <!-- 第五个图片的格式   1   -->
+                <div class="col-md-5 py-4" style="top: 100px">    <!-- 第五个图片的格式    5    -->
+                    <div class="jumbotron jumbotron-fluid text-center bg-info" style="color: white">
+                        <p>The MS-09R Rick Dom Dozle Zabi Custom is a customized MS-09R Rick Dom designed for Vice Admiral Dozle Zabi. It is featured in the original design series MSV-R.<br>This customized MS-09R Rick Dom was designed specifically for Vice Admiral Dozle Zabi, the commander of the Zeon's Space Attack Force. With mobile suit technology steadily advancing on both sides, customized units of newer mobile suits were often given to ace pilots to replace their aging Zaku's which were quickly becoming outmatched by the Federation's expanding mobile suit forces. It is similar to the standard MS-09R Rick Dom, but with a spiked armor on its shoulders and hands, ornate gold engravings and trim all over its frame, and green colored armor. Also, due to Dozle Zabi's huge size, he had to have the cockpit specially enlarged.</p >  
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="container-fluid padding bg-info"></div>
     </body>
     
     <script>
@@ -95,6 +288,11 @@
         $("#MRS").click(function(event) {
             setTimeout(function() {
             window.location.href = "MRS.html";
+          }, 500)});
+        
+        $("#homePage").click(function(event) {
+            setTimeout(function() {
+            window.location.href = "Project30_Part01.html";
           }, 500)});
     </script>
 </html>
