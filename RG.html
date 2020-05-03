@@ -16,10 +16,59 @@
         src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>  
         
         <style>
+            p {
+                font-family: monospace;
+                font-size: 16.5px;
+            }
             .nav-link {
                 font-family: monospace; 
                 font-size: 20px; 
             }
+            .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+            }
+            .padding {
+                padding: 40px 40px;
+            }
+            
+    #frame01{width:600px;height:650px;overflow:hidden;border-radius:10px;left:20px;top:15px} <!-- 图片1的位置 flame01 对应的是 flame01  的格子 -->
+    #dis li{display:block;width:600px;height:650px;margin:10px;float:left;text-align:center;color:#cacaca;border-radius:10px;background:#000}
+    #photos-z img{float:inherit;width:600px;height:600px}
+    #photos-z {position: absolute; width: calc(610px * 7); }
+    .play{ animation: make 15s infinite alternate;}
+    
+    #frame02{width:600px;height:600px;overflow:hidden;border-radius:10px;right:20px;top:15px}  <!-- 图片2的位置 flame02 对应的是 flame02  的格子 -->
+    #dis li{display:block;width:600px;height:600px;margin:10px;float:right;text-align:center;color:#cacaca;border-radius:10px;background:#000}
+    #photos-v img{float:inherit;width:600px;height:600px}
+    #photos-v {position: absolute; width: calc(610px * 7); }
+    .play{ animation: make 15s infinite alternate;}
+   
+    #frame03{width:600px;height:650px;overflow:hidden;border-radius:10px;left:20px;top:15px}  <!-- 图片3的位置 flame03 对应的是 flame03  的格子 -->
+    #dis li{display:block;width:600px;height:650px;margin:10px;float:left;text-align:center;color:#cacaca;border-radius:10px;background:#000}
+    #photos-k img{float:inherit;width:600px;height:600px}
+    #photos-k {position: absolute; width: calc(610px * 7); }
+    .play{ animation: make 15s infinite alternate;}
+            
+    #frame04{width:600px;height:650px;overflow:hidden;border-radius:10px;right:20px;top:15px}  <!-- 图片4的位置 flame04 对应的是 flame04  的格子 -->
+    #dis li{display:block;width:600px;height:650px;margin:10px;float:right;text-align:center;color:#cacaca;border-radius:10px;background:#000}
+    #photos-p img{float:inherit;width:600px;height:600px}
+    #photos-p {position: absolute; width: calc(610px * 7); }
+    .play{ animation: make 15s infinite alternate;}
+            
+    #frame05{width:600px;height:600px;overflow:hidden;border-radius:10px;left:20px;top:15px} <!-- 图片5的位置 flame05 对应的是 flame05  的格子 -->
+    #dis li{display:block;width:600px;height:600px;margin:10px;float:left;text-align:center;color:#cacaca;border-radius:10px;background:#000}
+    #photos-r img{float:inherit;width:600px;height:600px}
+    #photos-r {position: absolute; width: calc(610px * 7); }
+    .play{ animation: make 15s infinite alternate;}       
+    
+    @keyframes make {     <!-- 这是个 funtion 放在最后就行 -->
+        0%,15% {        margin-left: 0px;       }
+        15%,30% {       margin-left: -620px;    }
+        30%,45% {       margin-left: -1230px;    }
+        45%,60% {       margin-left: -1850px;    }
+        60%,75% {       margin-left: -2480px;    }
+        75%,100% {      margin-left: -3050px;    }
+    }
         
         </style>     
         
@@ -27,12 +76,12 @@
     
     <body>
         <div>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-between">
-                <a class="navbar-brand" href="#" style="color: black;font-size: 32px;font-family: monospace">Gundam FM</a>
+            <nav class="navbar navbar-expand-lg justify-content-between" style="background-color: deepskyblue">
+                <a class="navbar-brand" href="#" id="homePage" style="color: white;font-size: 32px;font-family: monospace">Gundam FM</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="collapse navbar-collapse" id="navbarNav" style="color: black">
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link" id="homepage">Home</a>
@@ -59,6 +108,157 @@
                 </div>
             </nav>
         </div>
+        
+         <div class="jumbotron jumbotron-fluid text-center bg-info">   <!-- 浅灰色的格子   12    -->
+            <div class="col-md-12 py-4" style="top: 10px">    <!-- 文字的格式    12    -->
+                <p style="font-family: monospace;font-size: 24px; color: white">Real Grade (RG) (リアルグレード Riarugurēdo?) is a line of Gunpla kits by Bandai that was introduced in 2010 as part of the Gundam 30th Anniversary commemoration project. These consist of Mobile Suits from both the Universal Century and the Alternate Centuries. The RG line combines the best aspects of the other three Gunpla lines: The small size and affordable prices of the High Grade, the advanced inner frame technology of the Master Grade and the massive parts count and details of the Perfect Grade. The tagline for the RG line is "Excitement Embodied". Also, the RG line reflects what a mobile suit would look like if it were built in the present day.</p >  
+            </div>
+        </div>
+        <div class="container-fluid"> <!-- 第一个图片加文字 -->
+            <div class="row">    
+                <div class="col-md-5 py-4" id="frame01">  <!-- 第一个图片的格式   6   -->
+                    <h2 style="text-align: center">
+                        <b>RG Unicorn Gundam 02 Banshee Norn</b>
+                    </h2> 
+                  <div id="photos-z" class="play">   <!-- 第二个图片 -->
+                    <img src="RG_pic/rg_gundam_banshee_1.png">
+                    <img src="RG_pic/rg_gundam_banshee_2.png">
+                    <img src="RG_pic/rg_gundam_banshee_3.jpg">
+                    <img src="RG_pic/rg_gundam_banshee_4.jpg">
+                    <img src="RG_pic/rg_gundam_banshee_5.jpg">
+                    <img src="RG_pic/rg_gundam_banshee_0.png">
+                  </div>  
+                </div>
+                <div class="col-md-2 py-4"></div>     <!-- 第一个图片的格式   1   -->
+                <div class="col-md-5 py-4" style="top: 100px">    <!-- 第一个图片的格式    5    -->
+                    <div class="jumbotron jumbotron-fluid text-center bg-danger" style="color: white">
+                        <p>The RX-0[N] Unicorn Gundam 02 Banshee Norn (aka Banshee Norn) is an upgraded variant of the RX-0 Unicorn Gundam 02 Banshee that appears in the OVA version of Mobile Suit Gundam Unicorn. The unit is piloted by Riddhe Marcenas.<br>The Banshee Norn is an upgraded version of the Banshee with improved performance, assigned to Londo Bell pilot Riddhe Marcenas. The unit itself remains unchanged from the upgrades, with only the Armed Armors BS and VN replaced by two new equipment, the Armed Armor DE and Armed Armor XC. The Banshee Norn's primary ranged weapon is the Beam Magnum but with a new attachment, the Revolving Launcher. In Destroy Mode, the Armed Armor XC opens and rotates up, giving the Banshee Norn a lion-like look.It’s equipped with two Beam Sabers, the Beam Magnum and an effect part, the Revolving Launcher, the Armed Armor DE, the Armed Armor XC, and realistic decals.
+                        </p >  
+                    </div>
+                </div>
+            </div>
+        </div>
+                            
+        <br>
+        <br>
+        
+            <div class="container-fluid">  <!-- 第二个图片加文字 -->
+            <div class="row">   
+                <div class="col-md-5 py-4" style="top: 50px">     <!-- 第二个图片的格式    5    -->
+                    <div class="jumbotron jumbotron-fluid text-center bg-primary" style="color: white">
+                        <p>The MBF-P01-Re2AMATU Gundam Astray Gold Frame Amatsu Mina is the renovated form of the late Rondo Gina Sahaku's MBF-P01-ReAMATU Gundam Astray Gold Frame Amatsu from the manga series Gundam SEED Astray. It is mainly piloted by Rondo Mina Sahaku.<br>Gundam Astray Gold Frame Amatsu Mina is the repaired, upgraded version of the MBF-P01-ReAMATU Gundam Astray Gold Frame Amatsu. Initially the suit's outward appearance did not differ much from its predecessor, it just has two new weapons: a pair of physical "Totsuka no Tsurugi" sabers stored on the side armors, and a retractable "Tsumuha no Tachi" triple claw mounted on the left forearm. However, an incident during its operation test led to the suit having additional armor on the legs and new feet.In CE 73, Yoon Sefan developed the "Okitsu no Kagami" equipment to bolster the Amatsu Mina's defensive capability. When equipped, the "Okitsu no Kagami" replaces the triple claw on the left forearm. The beam shield generated by this new system can also form a beam blade, and can be used to attack enemy units in various ways.</p >  
+                    </div>
+                </div>
+                <div class="col-md-2 py-4"></div>      <!-- 第二个图片的格式    1    -->
+                <div class="col-md-5 py-4" id="frame02">  <!-- 第二个图片的格式    6    -->
+                    <h2 style="text-align: center">
+                        <b> RG Astray Gold Frame Amatsu Mina</b>
+                    </h2> 
+                  <div id="photos-v" class="play">     <!-- 第二个图片 -->
+                    <img src="RG_pic/rg_astray_gold_frame_amatsu_mina_1.jpg">
+                    <img src="RG_pic/rg_astray_gold_frame_amatsu_mina_2.jpg">
+                    <img src="RG_pic/rg_astray_gold_frame_amatsu_mina_3.jpg">
+                    <img src="RG_pic/rg_astray_gold_frame_amatsu_mina_1.jpg">
+                    <img src="RG_pic/rg_astray_gold_frame_amatsu_mina_2.jpg">
+                    <img src="RG_pic/rg_astray_gold_frame_amatsu_mina_3.jpg">
+                    
+                  </div>
+                </div>
+            </div>
+        </div>
+     
+        <br>
+        <br>
+        
+        <div class="container-fluid"> <!-- 第三个图片加文字 -->
+            <div class="row">    
+                <div class="col-md-5 py-4" id="frame03" style="border: 10px" >  <!-- 第三个图片的格式   6   -->
+                    <h2 style="text-align: center">
+                        <b>RG MSN-04 Sazabi</b>
+                    </h2> 
+                  <div id="photos-k" class="play">   <!-- 第三个图片 -->
+                    <img src="RG_pic/rg_sazabi_1.png">
+                    <img src="RG_pic/rg_sazabi_2.png">
+                    <img src="RG_pic/rg_sazabi_6.jpg">
+                    <img src="RG_pic/rg_sazabi_3.png">
+                    <img src="RG_pic/rg_sazabi_4.png">
+                    <img src="RG_pic/rg_sazabi_5.jpg">
+        
+                  </div>  
+                </div>
+                <div class="col-md-2 py-4"></div>     <!-- 第三个图片的格式   1   -->
+                <div class="col-md-5 py-4" style="top: 75px">    <!-- 第三个图片的格式    5    -->
+                    <div class="jumbotron jumbotron-fluid text-center bg-warning" style="color: black">
+                        <p>TPiloted by Banagher Links, the PG Unicorn is the first Perfect Grade Bandai kit in four years, and the most impressive to date. A spectacular separate LED kit can be purchased to bring Unicorn to life in light on display! Fans can expect an array of extraordinary features from this kit —
+
+A perfect reproduction of the transformation from Unicorn mode to Destroy mode (face guard expansion included)
+The full-body red Psycoframe employs special transluscent plastic for the 30-piece LED kit (sold separately) to shine through
+The blade antenna, which can be expanded or collapsed for transformation, utilizes a magnet to display a beautiful, single horn in Unicorn mode, and the inner parts of the horn expose colored gold in Destroy mode
+Elbows and knees are made to achieve the utmost range of movement without detracting from the appearance of their exteriors
+Armament units around the knees are moveable in every mode</p > 
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <br>
+        <br>
+        
+        <div class="container-fluid">  <!-- 第四个图片加文字 -->
+            <div class="row">   
+                <div class="col-md-5 py-4" style="top: 100px">     <!-- 第四个图片的格式    5    -->
+                    <div class="jumbotron jumbotron-fluid text-center bg-secondary" style="color: white">
+                        <p>The MS-06R-1A Zaku II High Mobility Type is one of many variants of the Zaku II series. It first appeared in Mobile Suit Variations for Mobile Suit Gundam III: Encounters in Space.<br>After the successful release of the MS-06R-1 Zaku II High Mobility Test Type the Zeon engineers began to receive feedback from the pilots on ways the mobile suit's design could be improved. The biggest difference from the R-1 is that the fuel tanks on the back and legs have been modified into cartridges to solve the problem of propellant consumption. In particular, those of the legs are changed into cylindrical cartridges. This not only simplifies replenishment in the mother ship, but also allows for replenishment in outer space, and a platoon equipped with this unit is to be accompanied by a Zaku equipped with refill cartridges. As a result of these changes, the MS-06R-1A Zaku II High Mobility Type has a longer operation time.</p> 
+                    </div>
+                </div>
+                <div class="col-md-2 py-4"></div>      <!-- 第四个图片的格式    1    -->
+                <div class="col-md-5 py-4" id="frame04" style="border: 10px" >  <!-- 第四个图片的格式    6    -->
+                    <h2 style="text-align: center">
+                        <b>RG MS-06R-1A Uma Lightning’s Zaku II [P-Bandai]</b>
+                    </h2> 
+                  <div id="photos-p" class="play">   <!-- 第四个图片 -->
+                    <img src="RG_pic/rg_uma_lighning_zaku_01.jpg" >
+                    <img src="RG_pic/rg_uma_lighning_zaku_02.jpg">
+                    <img src="RG_pic/rg_uma_lighning_zaku_03.jpg" >
+                    <img src="RG_pic/rg_uma_lighning_zaku_04.jpg" >
+                    <img src="RG_pic/rg_uma_lighning_zaku_05.jpg" >
+                    <img src="RG_pic/rg_uma_lighning_zaku_06.jpg" >
+                  </div>  
+                </div>
+            </div>
+        </div>
+        
+        <br>
+        <br>
+        
+        <div class="container-fluid"> <!-- 第五个图片加文字 -->
+            <div class="row">    
+                <div class="col-md-5 py-4" id="frame05" style="border: 10px" >  <!-- 第五个图片的格式   6   -->
+                    <h2 style="text-align: center">
+                        <b>RG Crossbone X2 [P-Bandai]</b>
+                    </h2> 
+                  <div id="photos-r" class="play">   <!-- 第五个图片 -->
+                    <img src="RG_pic/pb_rg_crossbone_x2_01.jpg">
+                    <img src="RG_pic/pb_rg_crossbone_x2_02.jpg">
+                    <img src="RG_pic/pb_rg_crossbone_x2_03.jpg">
+                    <img src="RG_pic/pb_rg_crossbone_x2_04.jpg">
+                    <img src="RG_pic/pb_rg_crossbone_x2_05.jpg">
+                    <img src="RG_pic/pb_rg_crossbone_x2_06.jpg">
+        
+                  </div>  
+                </div>
+                <div class="col-md-2 py-4"></div>     <!-- 第五个图片的格式   1   -->
+                <div class="col-md-5 py-4" style="top: 100px">    <!-- 第五个图片的格式    5    -->
+                    <div class="jumbotron jumbotron-fluid text-center bg-info" style="color: white">
+                        <p>The Crossbone Gundam X-2 is a testbed mobile suit developed by the Earth Federation's Strategic Naval Research Institute (SNRI). It was featured in the manga series Mobile Suit Crossbone Gundam.<br>Unlike many mobile suits developed by the SNRI, which were designed for use around the Earth orbit, the F-97 is specifically designed to be used around Jupiter, whose strong gravity field would generate serious propulsion problems. For units operating on Earth and around Earth orbit, the problem of high mobility was solved putting numerous thrusters all over the mobile suit's body. However, under Jupiter's gravitational influence, this would require enlargement of the thrusters, leading to an increase of the mobile suit's size and mass. Moreover, in order to use the larger thrusters a larger and more powerful generator would be needed, adding to the general mass.</p >  
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="container-fluid padding bg-info"></div>
     </body>
     
     <script>
@@ -95,6 +295,11 @@
         $("#MRS").click(function(event) {
             setTimeout(function() {
             window.location.href = "MRS.html";
+          }, 500)});
+        
+        $("#homePage").click(function(event) {
+            setTimeout(function() {
+            window.location.href = "Project30_Part01.html";
           }, 500)});
     </script>
 </html>
