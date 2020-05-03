@@ -16,10 +16,59 @@
         src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>  
         
         <style>
+            p {
+                font-family: monospace;
+                font-size: 16.5px;
+            }
             .nav-link {
                 font-family: monospace; 
                 font-size: 20px; 
             }
+            .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+            }
+            .padding {
+                padding: 40px 40px;
+            }
+            
+    #frame01{width:600px;height:650px;overflow:hidden;border-radius:10px;left:20px;top:15px} <!-- 图片1的位置 flame01 对应的是 flame01  的格子 -->
+    #dis li{display:block;width:600px;height:650px;margin:10px;float:left;text-align:center;color:#cacaca;border-radius:10px;background:#000}
+    #photos-z img{float:inherit;width:600px;height:600px}
+    #photos-z {position: absolute; width: calc(610px * 7); }
+    .play{ animation: make 15s infinite alternate;}
+    
+    #frame02{width:600px;height:600px;overflow:hidden;border-radius:10px;right:20px;top:15px}  <!-- 图片2的位置 flame02 对应的是 flame02  的格子 -->
+    #dis li{display:block;width:600px;height:600px;margin:10px;float:right;text-align:center;color:#cacaca;border-radius:10px;background:#000}
+    #photos-v img{float:inherit;width:600px;height:600px}
+    #photos-v {position: absolute; width: calc(610px * 7); }
+    .play{ animation: make 15s infinite alternate;}
+   
+    #frame03{width:600px;height:650px;overflow:hidden;border-radius:10px;left:20px;top:15px}  <!-- 图片3的位置 flame03 对应的是 flame03  的格子 -->
+    #dis li{display:block;width:600px;height:650px;margin:10px;float:left;text-align:center;color:#cacaca;border-radius:10px;background:#000}
+    #photos-k img{float:inherit;width:600px;height:600px}
+    #photos-k {position: absolute; width: calc(610px * 7); }
+    .play{ animation: make 15s infinite alternate;}
+            
+    #frame04{width:600px;height:650px;overflow:hidden;border-radius:10px;right:20px;top:15px}  <!-- 图片4的位置 flame04 对应的是 flame04  的格子 -->
+    #dis li{display:block;width:600px;height:650px;margin:10px;float:right;text-align:center;color:#cacaca;border-radius:10px;background:#000}
+    #photos-p img{float:inherit;width:600px;height:600px}
+    #photos-p {position: absolute; width: calc(610px * 7); }
+    .play{ animation: make 15s infinite alternate;}
+            
+    #frame05{width:600px;height:600px;overflow:hidden;border-radius:10px;left:20px;top:15px} <!-- 图片5的位置 flame05 对应的是 flame05  的格子 -->
+    #dis li{display:block;width:600px;height:600px;margin:10px;float:left;text-align:center;color:#cacaca;border-radius:10px;background:#000}
+    #photos-r img{float:inherit;width:600px;height:600px}
+    #photos-r {position: absolute; width: calc(610px * 7); }
+    .play{ animation: make 15s infinite alternate;}       
+    
+    @keyframes make {     <!-- 这是个 funtion 放在最后就行 -->
+        0%,15% {        margin-left: 0px;       }
+        15%,30% {       margin-left: -620px;    }
+        30%,45% {       margin-left: -1230px;    }
+        45%,60% {       margin-left: -1850px;    }
+        60%,75% {       margin-left: -2480px;    }
+        75%,100% {      margin-left: -3050px;    }
+    }
         
         </style>     
         
@@ -27,12 +76,12 @@
     
     <body>
         <div>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-between">
-                <a class="navbar-brand" href="#" style="color: black;font-size: 32px;font-family: monospace">Gundam FM</a>
+            <nav class="navbar navbar-expand-lg justify-content-between" style="background-color: deepskyblue">
+                <a class="navbar-brand" href="#" id="homePage" style="color: white;font-size: 32px;font-family: monospace">Gundam FM</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="collapse navbar-collapse" id="navbarNav" style="color: black">
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link" id="homepage">Home</a>
@@ -59,6 +108,162 @@
                 </div>
             </nav>
         </div>
+        
+         <div class="jumbotron jumbotron-fluid text-center bg-info">   <!-- 浅灰色的格子   12    -->
+            <div class="col-md-12 py-4" style="top: 10px">    <!-- 文字的格式    12    -->
+                <p style="font-family: monospace;font-size: 24px; color: white">Perfect Grade (PG) (パーフェクトグレード ) is a series of 1/60 scale Gunpla kits created by Bandai. The PG line originated with the release of the Perfect Grade Evangelion EVA-01 in 1997. The line was later transferred to the Gundam franchise in 1998 and was exclusive to Gundam until 2017, when Bandai announced the Perfect Grade 1/72 scale Millennium Falcon for the Star Wars franchise. The PG line has significant external and internal details plus light up gimmicks with LEDs. The PGs are some of the most expensive Gunpla produced and have often been used to develop Master Grade and Real Grade technology.
+
+In 2020, Bandai introduced a new sub-line Perfect Grade Unleased featuring kits with increased complexity and diecast metal parts to commemorate the 40th anniversary of Gunpla.
+
+This article covers only the Gundam releases.</p >  
+            </div>
+        </div>
+        <div class="container-fluid"> <!-- 第一个图片加文字 -->
+            <div class="row">    
+                <div class="col-md-5 py-4" id="frame01">  <!-- 第一个图片的格式   6   -->
+                    <h2 style="text-align: center">
+                        <b>PG Perfect Strike Gundam</b>
+                    </h2> 
+                  <div id="photos-z" class="play">   <!-- 第二个图片 -->
+                    <img src="PG_pic/pg_perfect_strike_01.jpg">
+                    <img src="PG_pic/pg_perfect_strike_02.jpg">
+                    <img src="PG_pic/pg_perfect_strike_03.jpg">
+                    <img src="PG_pic/pg_perfect_strike_04.jpg">
+                    <img src="PG_pic/pg_perfect_strike_05.jpg">
+                    <img src="PG_pic/pg_perfect_strike.png">
+                  </div>  
+                </div>
+                <div class="col-md-2 py-4"></div>     <!-- 第一个图片的格式   1   -->
+                <div class="col-md-5 py-4" style="top: 100px">    <!-- 第一个图片的格式    5    -->
+                    <div class="jumbotron jumbotron-fluid text-center bg-danger" style="color: white">
+                        <p>The GAT-X105+AQM/E-YM1 Perfect Strike Gundam is a mobile suit first featured in the eyecatches of the Mobile Suit Gundam SEED HD Remaster, and later made its debut in episode 36 of the HD Remaster. It is the heavy armed variant of the GAT-X105 Strike Gundam, and is piloted by Mu La Flaga.
+                            <br>The Perfect Strike Gundam is a configuration of the Strike Gundam equipped with the "AQM/E-YM1 Multiple Assault Striker", which integrates the characteristics of the Aile, Sword and Launcher Striker Packs. A modified Aile Striker Pack served as the central unit of the Multiple Assault Striker, its main wings are moved back slightly for mounting the "Schwert Gewehr" Anti-Ship Sword and "Agni" Hyper Impulse Cannon, and four battery packs are attached to the back to deal with the increased energy consumption.
+                        </p >  
+                    </div>
+                </div>
+            </div>
+        </div>
+                            
+        <br>
+        <br>
+        
+            <div class="container-fluid">  <!-- 第二个图片加文字 -->
+            <div class="row">   
+                <div class="col-md-5 py-4" style="top: 50px">     <!-- 第二个图片的格式    5    -->
+                    <div class="jumbotron jumbotron-fluid text-center bg-primary" style="color: white">
+                        <p>The set includes plastic parts to build 00 Gundam and 0 Raiser, which can be docked to the back of the close-combat Mobile Suit to form 00 Raiser. Its snap-fit parts can be assembled without the use of glue, and also come molded in color so no painting is required to finish the model. Upon completion, the Mobile Suit will be fully articulated thanks to its super-flexible inner body frame that’s capable of holding numerous realistic action poses. Its individual fingers are poseable, too! The “camera eyes” light up with internal wiring and a single LED (two test button batteries are included); the kit also includes two pre-assembled GN drives (two test coin batteries are included) that can also light up and spin! Its weapon loadouts consist of a GN sword II and GN sword III, which can switch to a GN rifle II and GN rifle III, respectively, a Raiser sword, a GN beam saber, a GN shield, a GN missile A/S, a particle dispersion missile, a GN condenser, and a hand missile unit. Foil stickers, tetron stickers, marking decals, and a hologram sheet are provided to add detail to the completed model. Includes exploded-view pictorial-type instructions, with notes in Japanese.</p >  
+                    </div>
+                </div>
+                <div class="col-md-2 py-4"></div>      <!-- 第二个图片的格式    1    -->
+                <div class="col-md-5 py-4" id="frame02">  <!-- 第二个图片的格式    6    -->
+                    <h2 style="text-align: center">
+                        <b> PG Gundam 00 Raiser</b>
+                    </h2> 
+                  <div id="photos-v" class="play">     <!-- 第二个图片 -->
+                    <img src="PG_pic/pg_exia_01.jpg">
+                    <img src="PG_pic/pg_exia_02.png">
+                    <img src="PG_pic/pg_exia_03.png">
+                    <img src="PG_pic/pg_exia_03.png">
+                    <img src="PG_pic/pg_exia_04.jpg">
+                    <img src="PG_pic/pg_exia_05.jpg">
+                    <img src="PG_pic/pg_exia_00.png">
+                  </div>
+                </div>
+            </div>
+        </div>
+     
+        <br>
+        <br>
+        
+        <div class="container-fluid"> <!-- 第三个图片加文字 -->
+            <div class="row">    
+                <div class="col-md-5 py-4" id="frame03" style="border: 10px" >  <!-- 第三个图片的格式   6   -->
+                    <h2 style="text-align: center">
+                        <b>PG RX-0 Unicorn Gundam</b>
+                    </h2> 
+                  <div id="photos-k" class="play">   <!-- 第三个图片 -->
+                    <img src="PG_pic/pg_unicorn_01.jpg">
+                    <img src="PG_pic/pg_unicorn_02.jpg">
+                    <img src="PG_pic/pg_unicorn_03.jpg">
+                    <img src="PG_pic/pg_unicorn_04.jpg">
+                    <img src="PG_pic/pg_unicorn_05.jpg">
+                    <img src="PG_pic/pg_unicorn_00.jpg">
+        
+                  </div>  
+                </div>
+                <div class="col-md-2 py-4"></div>     <!-- 第三个图片的格式   1   -->
+                <div class="col-md-5 py-4" style="top: 75px">    <!-- 第三个图片的格式    5    -->
+                    <div class="jumbotron jumbotron-fluid text-center bg-warning" style="color: black">
+                        <p>TPiloted by Banagher Links, the PG Unicorn is the first Perfect Grade Bandai kit in four years, and the most impressive to date. A spectacular separate LED kit can be purchased to bring Unicorn to life in light on display! Fans can expect an array of extraordinary features from this kit —
+
+A perfect reproduction of the transformation from Unicorn mode to Destroy mode (face guard expansion included)
+The full-body red Psycoframe employs special transluscent plastic for the 30-piece LED kit (sold separately) to shine through
+The blade antenna, which can be expanded or collapsed for transformation, utilizes a magnet to display a beautiful, single horn in Unicorn mode, and the inner parts of the horn expose colored gold in Destroy mode
+Elbows and knees are made to achieve the utmost range of movement without detracting from the appearance of their exteriors
+Armament units around the knees are moveable in every mode</p > 
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <br>
+        <br>
+        
+        <div class="container-fluid">  <!-- 第四个图片加文字 -->
+            <div class="row">   
+                <div class="col-md-5 py-4" style="top: 100px">     <!-- 第四个图片的格式    5    -->
+                    <div class="jumbotron jumbotron-fluid text-center bg-secondary" style="color: white">
+                        <p>The RX-0 Unicorn Gundam 03 Phenex(aka Phenex) is a mobile suit introduced in Mobile Suit Gundam UC: One of Seventy Two. It also appears in the manga Mobile Suit Gundam U.C. 0096: Last Sun and the Mobile Suit Gundam Unicorn novel. It makes its animated debut in the movie Mobile Suit Gundam Narrative, which succeeds the events of the Mobile Suit Gundam Unicorn OVA. It is piloted by Rita Bernal.<br>The RX-0 Unicorn Gundam 03 Phenex was a new machine secretly built under the direction of a EFSF official who disapproved of the Vist Foundation's involvement in the UC Project. Using a psycho-frame body delivered in advance, it was assembled independently by the Earth Federation Forces and reflects the data of Units 1 and 2. Rather than that of a Unicorn, the Phenex's motif is that of a phoenix, illustrated with a much more elaborate horn/V-fin and a golden body</p> 
+                    </div>
+                </div>
+                <div class="col-md-2 py-4"></div>      <!-- 第四个图片的格式    1    -->
+                <div class="col-md-5 py-4" id="frame04" style="border: 10px" >  <!-- 第四个图片的格式    6    -->
+                    <h2 style="text-align: center">
+                        <b>PG Unicorn Gundam 03 Phenex [P-Bandai]</b>
+                    </h2> 
+                  <div id="photos-p" class="play">   <!-- 第四个图片 -->
+                    <img src="PG_pic/pg_pb_phenex_01.jpg" >
+                    <img src="PG_pic/pg_pb_phenex_02.jpg">
+                    <img src="PG_pic/pg_pb_phenex_03.jpg" >
+                    <img src="PG_pic/pg_pb_phenex_04.jpg" >
+                    <img src="PG_pic/pg_pb_phenex_05.jpg" >
+                    <img src="PG_pic/pg_pb_phenex_06.jpg" >
+                  </div>  
+                </div>
+            </div>
+        </div>
+        
+        <br>
+        <br>
+        
+        <div class="container-fluid"> <!-- 第五个图片加文字 -->
+            <div class="row">    
+                <div class="col-md-5 py-4" id="frame05" style="border: 10px" >  <!-- 第五个图片的格式   6   -->
+                    <h2 style="text-align: center">
+                        <b>PG Gundam Exia</b>
+                    </h2> 
+                  <div id="photos-r" class="play">   <!-- 第五个图片 -->
+                    <img src="PG_pic/pg_exia_01.jpg">
+                    <img src="PG_pic/pg_exia_02.png">
+                    <img src="PG_pic/pg_exia_03.png">
+                    <img src="PG_pic/pg_exia_04.jpg">
+                    <img src="PG_pic/pg_exia_05.jpg">
+                    <img src="PG_pic/pg_exia_00.png">
+        
+                  </div>  
+                </div>
+                <div class="col-md-2 py-4"></div>     <!-- 第五个图片的格式   1   -->
+                <div class="col-md-5 py-4" style="top: 100px">    <!-- 第五个图片的格式    5    -->
+                    <div class="jumbotron jumbotron-fluid text-center bg-info" style="color: white">
+                        <p>The GN-001 Gundam Exia (aka Exia, Gundam Seven Swords) is a mobile suit featured in season one of Mobile Suit Gundam 00 and is piloted by Setsuna F. Seiei.<br>The Exia also has finer attitude control capabilities than the other Gundams, which is beneficial for close combat, and this is related to its GN Cables.The GN Cables, also known as “GN Power Lines”, are the light purple-colored cables running through various parts of the Exia's body and also one of its eye-catching visual features. While these cables are also found on other Gundams, the ones extending from the shoulders to the upper arms are unique to Exia.The cables facilitate the supply of tremendous amount of GN Particles, and thus energy, to each part of the Gundam instantaneously. They are also used for attitude control due to the GN Particles' mass reduction effect, and so, the Exia which has more cables on its exterior than the other Gundams is able to achieve finer control.In terms of defense however, such placements are dangerous, and later in GN-001REII Gundam Exia Repair II, the cables become mostly stowed in the armor.</p >  
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="container-fluid padding bg-info"></div>
     </body>
     
     <script>
@@ -95,6 +300,11 @@
         $("#MRS").click(function(event) {
             setTimeout(function() {
             window.location.href = "MRS.html";
+          }, 500)});
+        
+        $("#homePage").click(function(event) {
+            setTimeout(function() {
+            window.location.href = "Project30_Part01.html";
           }, 500)});
     </script>
 </html>
