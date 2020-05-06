@@ -1,0 +1,297 @@
+<!DOCTYPE HTML>
+
+<html>
+    <head lang="en">
+        <title>Gundam FanMade Website</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width-device-width, intial-scale-1"> 
+        
+        <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script
+        src="https://code.jquery.com/jquery-3.4.1.js"></script>
+        <script
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>  
+        
+        <style>
+            .nav-link {
+                font-family: monospace; 
+                font-size: 20px; 
+            }
+            .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+            }
+            
+            body {
+                margin: 0;
+                padding: 0;
+                background-color: beige;
+            }
+            .game-container {
+                border: 5px solid green;
+                background-color: white;
+            }
+            .score-wrapper {
+                background-color: lavender;
+            }
+            th, td {
+                font-size: 2em;
+                padding: 20px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div>
+            <nav class="navbar navbar-expand-lg justify-content-between" style="background-color: deepskyblue">
+                <a class="navbar-brand" href="#" id="homePage" style="color: white;font-size: 32px;font-family: monospace">Gundam FM</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav" style="color: black">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" id="homepage">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="HG">High Grade</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="RG">Real Grade</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="MG">Master Grade</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="PG">Perfect Grade</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="MB">Metal Build</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="MRS">Metal Robot Spirits</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="alert alert-danger alert-dismissible fade show">
+                <button type="button" class="close" data-dismiss="alert">&times;
+                </button>
+                IMPORTANT NOTE : Use A and Z to control the left rectangle and use Up and Down key to control right rectangle.
+            </div>
+        <svg class="game-container" id="field" width="900" height="500">
+            <rect id="left" fill="red"/>
+            <rect id="right" fill="blue"/>
+            <circle id="ball" fill="green"/>
+        </svg>
+        <div class="score-wrapper">
+            <table>
+                <tr>
+                    <th>Left Player Score</th>
+                    <th>Right Player Score</th>
+                </tr>
+                <tr>
+                    <td id="leftScore">0</td>
+                    <td id="rightScore">0</td>
+                </tr>
+            </table>
+        </div>
+        
+        <script>
+            function Point(x, y) {
+                this.x = x;
+                this.y = y;
+            }    
+            function Velocity(dx, dy) {
+                this.dx = dx;
+                this.dy = dy;
+            }
+            ///// ALl the parameters of the game (e.g. racket width)
+            function Game() {
+                this.fieldWidth = 900;
+                this.fieldHeight = 400;
+                this.racketWidth = 10;
+                this.racketHeight = 85;
+                this.ballRadius = 10;
+                this.ballCenter = new Point(this.fieldWidth / 2, this.fieldHeight / 2);
+                this.leftInit = new Point(0, 0);
+                this.rightInit = new Point(this.fieldWidth - (this.racketWidth + 10), 0);
+                this.ballInitV = new Velocity(-1, -1);
+                this.racketSpeed = 2;
+                this.leftScore = 0;
+                this.rightScore = 0;
+            }
+            // Intialize the game
+            let g = new Game();
+            field.setAttribute("width", g.fieldWidth);  
+            field.setAttribute("height", g.fieldHeight); 
+            left.setAttribute("width", g.racketWidth);
+            left.setAttribute("height", g.racketHeight); 
+            right.setAttribute("width", g.racketWidth);
+            right.setAttribute("height", g.racketHeight);
+            left.setAttribute("x", g.leftInit.x);
+            left.setAttribute("y", g.leftInit.y); 
+            right.setAttribute("x", g.rightInit.x);
+            right.setAttribute("y", g.rightInit.y);
+            ball.setAttribute("r", g.ballRadius);
+            ball.setAttribute("cx", g.ballCenter.x);
+            ball.setAttribute("cy", g.ballCenter.y);
+            // KEY state from the keyboard
+            var keys = {};
+            window.addEventListener("keydown", function(e) {
+                keys[e.keyCode || e.which] = true;
+            }, true);
+            window.addEventListener("keyup", function(e) {
+                keys[e.keyCode || e.which] = false;  
+            }, false);
+            // logic for racket movement
+            setInterval(() => {
+                if(keys[65]) {
+                    let y = +left.getAttribute("y"); // + convert into a number
+                    y = y - g.racketSpeed;
+                    if(y >= 0) {
+                        left.setAttribute("y", y);
+                    }
+                }
+                if(keys[90]) {
+                    let y = +left.getAttribute("y"); // + convert into a number
+                    y = y + g.racketSpeed;
+                    if(y <= g.fieldHeight - g.racketHeight) {
+                        left.setAttribute("y", y);
+                    }
+                }
+                // Down Arrow key
+                if(keys[38]) {
+                    let y = +right.getAttribute("y");
+                    y = y - g.racketSpeed;
+                    if(y >= 0) {
+                        right.setAttribute("y", y);
+                    }
+                }
+                // Up Arrow key
+                if(keys[40]) {
+                    let y = +right.getAttribute("y");
+                    y = y + g.racketSpeed;
+                    if(y <= g.fieldHeight - g.racketHeight) {
+                        right.setAttribute("y", y);
+                    }
+                }
+            }, 1);
+            // logic for ball movement
+            let ballV = new Velocity(g.ballInitV.dx, g.ballInitV.dy);
+            setInterval(() => {
+                let ballX = +ball.getAttribute("cx");
+                let ballY = +ball.getAttribute("cy");
+                ballX += ballV.dx;
+                ballY += ballV.dy;
+                ball.setAttribute("cx", ballX);
+                ball.setAttribute("cy", ballY);
+                // Check the top and buttom of the field
+                if(ballY < g.ballRadius) {
+                        ballV.dy = -ballV.dy;
+                }
+                else if(ballY > g.fieldHeight - g.ballRadius) {
+                    ballV.dy = -ballV.dy
+                }
+                // Check the left and right
+                // Left bouce
+                if(ballX < g.ballRadius) {
+                    let racketY = +left.getAttribute("y");
+                    if(ballY > racketY && ballY < racketY + g.racketHeight) {
+                        ballV.dx = -ballV.dx;
+                        let noise = Math.random();
+                        if(racketY % 2 == 0) {
+                            noise = -noise;
+                        }
+                        ballV.dy = ballV.dy + noise;
+                    }
+                    else { //right player scores
+                        ball.setAttribute("cx", g.ballCenter.x);
+                        ball.setAttribute("cy", g.ballCenter.y);
+                        newVX = (Math.random() + Math.abs(g.ballInitV.dx)) / 2.0;
+                        newVY = (Math.random() + Math.abs(g.ballInitV.dy)) / 2.0;
+                        if(Math.random() > 0.5) {
+                            newVX = - newVX;
+                        }
+                        if(Math.random() > 0.5) {
+                            newVY = - newVY;
+                        }
+                        ballV = new Velocity(newVX, newVY);
+                        g.rightScore += 1;
+                        rightScore.innerHTML = g.rightScore;
+                    }
+                }
+                // right bouce
+                else if(ballX > g.fieldWidth - g.ballRadius) {
+                    let racketY = +right.getAttribute("y");
+                    if(ballY > racketY && ballY < racketY + g.racketHeight) {
+                        ballV.dx = -ballV.dx;
+                        let noise = Math.random();
+                        if(racketY % 2 == 0) {
+                            noise = -noise;
+                        }
+                        ballV.dy = ballV.dy + noise;
+                    }
+                    else { // left player scores
+                        ball.setAttribute("cx", g.ballCenter.x);
+                        ball.setAttribute("cy", g.ballCenter.y);
+                        newVX = (Math.random() + Math.abs(g.ballInitV.dx)) / 2.0;
+                        newVY = (Math.random() + Math.abs(g.ballInitV.dy)) / 2.0;
+                        if(Math.random() > 0.5) {
+                            newVX = - newVX;
+                        }
+                        if(Math.random() > 0.5) {
+                            newVY = - newVY;
+                        }
+                        ballV = new Velocity(newVX, newVY);
+                        g.leftScore += 1;
+                        leftScore.innerHTML = g.leftScore;
+                    }
+                }
+            }, 0,0001);
+
+            $("#homepage").click(function(event) {
+                setTimeout(function() {
+                window.location.href = "Project30_Part01.html";
+              }, 500)});
+
+            $("#HG").click(function(event) {
+                setTimeout(function() {
+                window.location.href = "HG.html";
+              }, 500)});
+
+            $("#RG").click(function(event) {
+                setTimeout(function() {
+                window.location.href = "RG.html";
+              }, 500)});
+
+            $("#MG").click(function(event) {
+                setTimeout(function() {
+                window.location.href = "MG.html";
+              }, 500)});
+
+            $("#PG").click(function(event) {
+                setTimeout(function() {
+                window.location.href = "PG.html";
+              }, 500)});
+
+            $("#MB").click(function(event) {
+                setTimeout(function() {
+                window.location.href = "MB.html";
+              }, 500)});
+
+            $("#MRS").click(function(event) {
+                setTimeout(function() {
+                window.location.href = "MRS.html";
+              }, 500)});
+            
+            $("#homePage").click(function(event) {
+                setTimeout(function() {
+                window.location.href = "Project30_Part01.html";
+              }, 500)});
+        </script>
+    </body>
+</html>
