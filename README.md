@@ -1,5 +1,5 @@
-# Project-1-30-
-Project #1 for 30% (school)
+# Project
+School Project
 
 ## Introduction
 In this project, we created a GUNDAM fandom website.
